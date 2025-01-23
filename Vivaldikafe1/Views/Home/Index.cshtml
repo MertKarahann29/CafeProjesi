@@ -1,0 +1,108 @@
+﻿@{
+    ViewBag.Title = "Kafe Ana Sayfası";
+    Layout = "~/Views/Shared/_Layout.cshtml"; 
+}
+
+<style>
+    body {
+        background-color: #ffffff; 
+        font-family: Arial, sans-serif;
+    }
+
+    header {
+        background-color: #49cab9; 
+        padding: 20px;
+        border-radius: 8px;
+        color: #333;
+    }
+
+    .menu {
+        margin-top: 30px;
+    }
+
+    .card {
+        margin-bottom: 20px;
+        border: none;
+        border-radius: 8px;
+        transition: transform 0.2s;
+    }
+
+    .card:hover {
+        transform: scale(1.05); 
+    }
+
+    .card-img-top {
+        border-radius: 8px 8px 0 0; 
+    }
+
+    .card-body {
+        background-color: #ffffff; 
+        border-radius: 0 0 8px 8px; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    }
+
+    .price {
+        font-weight: bold;
+        color: #d9534f; 
+    }
+
+    .contact {
+        background-color: #e9ecef; 
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 30px;
+    }
+</style>
+
+<div class="container">
+    <header class="text-center">
+        <h1>Hoş Geldiniz!</h1>
+        <p>En lezzetli Anlar için doğru yerdesiniz.</p>
+    </header>
+
+    <section class="menu">
+        <h2>En Beğendikleriniz</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://www.havayolu101.com/wp-content/uploads/2016/04/Turk-kahvesi.jpg" class="card-img-top" alt="Kahve">
+                    <div class="card-body">
+                        <h5 class="card-title">Türk Kahvesi</h5>
+                        <p class="card-text">Taze çekilmiş kahvemiz ve lokum eşliğindeki kahvemiz...</p>
+                        <p class="price">₺65</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://ideacdn.net/shop/gr/04/myassets/products/051/web-orman-meyveli-redvelvet-pasta-dilim2-b4y8.jpg?revision=1697143329" class="card-img-top" alt="Pasta">
+                    <div class="card-body">
+                        <h5 class="card-title">Orman Meyveli Pasta </h5>
+                        <p class="card-text">Ev yapımı taze pastalar.</p>
+                        <p class="price">₺95</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://www.unileverfoodsolutions.com.tr/dam/global-ufs/mcos/TURKEY/calcmenu/recipes/TR-recipes/general/%C5%9Fark%C3%BCteri-sandvi%C3%A7/main-header.jpg" class="card-img-top" alt="Sandviç">
+                    <div class="card-body">
+                        <h5 class="card-title">Dana Jambonlu Sandviç</h5>
+                        <p class="card-text">İçerisinde; Dana Jampon,Taze Yeişllikler, Kaşar Peyniri ve Özel Sosumuz...</p>
+                        <p class="price">₺120</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact mt-5">
+        <h2>İletişim</h2>
+        <p>Bize ulaşmak için:</p>
+        <ul>
+            <li>Telefon: (123) 456-7890</li>
+            <li>Email: info@kafe.com</li>
+            <li>Adres: Kafe Sokak No:1, İstanbul</li>
+        </ul>
+    </section>
+</div>

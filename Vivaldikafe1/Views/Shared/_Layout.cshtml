@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>@ViewData["Title"] - VivaldiCafe</title>
+
+	<!-- Bootstrap 5 CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Custom CSS -->
+	<style>
+		:root {
+		--primary-color: #3498db;
+		--secondary-color: #2ecc71;
+		}
+
+		.navbar-custom {
+		background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+		padding: 1rem 0;
+		}
+
+		.navbar-custom .navbar-brand {
+		color: white;
+		font-size: 1.5rem;
+		font-weight: bold;
+		}
+
+		.navbar-custom .nav-link {
+		color: white !important;
+		transition: all 0.3s ease;
+		}
+
+		.navbar-custom .nav-link:hover {
+		transform: translateY(-2px);
+		text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+		}
+
+		.sidebar {
+		background-color: #f8f9fa;
+		min-height: calc(100vh - 72px);
+		padding: 20px;
+		border-right: 1px solid #dee2e6;
+		}
+
+		.sidebar-item {
+		padding: 10px 15px;
+		border-radius: 5px;
+		margin-bottom: 5px;
+		transition: all 0.3s ease;
+		}
+
+		.sidebar-item:hover {
+		background-color: #e9ecef;
+		transform: translateX(5px);
+		}
+
+		.main-content {
+		padding: 20px;
+		background-color: #ffffff;
+		}
+
+		.footer {
+		background-color: #343a40;
+		color: white;
+		padding: 1rem 0;
+		position: relative;
+		bottom: 0;
+		width: 100%;
+		}
+
+		.page-title {
+		border-bottom: 2px solid var(--primary-color);
+		padding-bottom: 10px;
+		margin-bottom: 20px;
+		}
+
+		.card {
+		transition: all 0.3s ease;
+		margin-bottom: 20px;
+		}
+
+		.card:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+		}
+	</style>
+</head>
+<body>
+	<!-- Navbar -->
+	<nav class="navbar navbar-expand-lg navbar-custom">
+		<div class="container">
+			<a class="navbar-brand" href="/">
+				<i class="fas fa-cube me-2"></i>Vivaldi Kafe
+			</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav ms-auto">
+					<li class="nav-item">
+						<a class="nav-link px-3" href="/Home/Index">Ana Sayfa</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link px-3" <a asp-controller="Ana" asp-action="Hakkımızda"> Hakkımızda </a></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link px-3" <a asp-controller="Musteri" asp-action="Index">İletişim</a>
+							
+								
+					</li>
+
+							@if (Context.Session.GetString("KullaniciRol") == "Admin")
+							{
+								<li class="nav-item px-3">
+									<a asp-controller="SogukKahve" asp-action="Index" class="nav-link">Soğuk Kahve Ekleme</a>
+								</li>
+								<li class="nav-item px-3">
+									<a asp-controller="SıcakKahve" asp-action="Index" class="nav-link">Sıcak Kahve Ekleme</a>
+								</li>
+								<li class="nav-item px-3">
+									<a asp-controller="SandTat" asp-action="Index" class="nav-link">Sandviç ve Tatlı Ekleme</a>
+								</li>
+								<li class="nav-item">
+								     <a asp-controller="Musteri" asp-action="Kayıt"class="nav-link">Yorumlar </a>
+							     </li>
+							}
+							@if (Context.Session.GetString("KullaniciId") == null)
+							{
+						        <li class="nav-item px-3">
+									<a asp-controller="User" asp-action="Giris" class="nav-link">Kullanıcı Giriş</a>
+								</li>
+
+							}
+							else
+							{
+						       <li class="nav-item dropdown">
+						            <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+										@Context.Session.GetString("KullaniciAdi")
+									</a>
+							         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+								          <li>
+									          <a class="dropdown-item" href="@Url.Action("OturumKapat", "User")">
+										       <i class="bi bi-box-arrow-right"></i> Çıkış Yap
+									          </a>
+								           </li>
+									</ul>
+
+								        
+								</li>
+							
+							
+							
+							}
+							
+						    
+					
+					</li>
+
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container-fluid">
+		<div class="row">
+			<!-- Sidebar -->
+			<div class="col-md-3 col-lg-2 sidebar">
+				<div class="sidebar-item">
+					<a class="nav-link" <a asp-controller="SıcakKahve" asp-action="Menü"> Sıcak Kahveler </a></a>
+				</div>
+				<div class="sidebar-item">
+					<a class="nav-link" <a asp-controller="SogukKahve" asp-action="Menü"> Soğuk Kahveler </a></a>
+				</div>
+
+				<div class="sidebar-item">
+					<a class="nav-link" <a asp-controller="SandTat" asp-action="Menü"> Sandviç Ve Tatlılar </a></a>
+				</div>
+
+
+
+
+			</div>
+
+			<!-- Ana İçerik -->
+			<div class="col-md-9 col-lg-10 main-content">
+				<h2 class="page-title">@ViewData["Title"]</h2>
+				@RenderBody()
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+	<footer class="footer mt-4">
+		<div class="container text-center">
+			<span>&copy; @DateTime.Now.Year - Vivaldi Kafe - Tüm hakları saklıdır.</span>
+		</div>
+	</footer>
+
+	<!-- Scripts -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

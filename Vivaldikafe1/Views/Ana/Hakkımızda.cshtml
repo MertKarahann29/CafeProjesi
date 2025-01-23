@@ -1,0 +1,110 @@
+@{
+    ViewBag.Title = "Hakkımızda";
+    Layout = "~/Views/Shared/_Layout.cshtml"; // Ana layout dosyanız
+}
+
+<style>
+    body {
+        background-color: #f4f4f4; /* Açık gri arka plan */
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .about-header {
+        background-color: #49cab9; /* Canlı sarı arka plan */
+        padding: 40px;
+        border-radius: 8px;
+        color: #333;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Hafif gölge */
+    }
+
+    .about-header h1 {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+    }
+
+    .about-header p {
+        font-size: 1.2em;
+        margin-top: 0;
+    }
+
+    .about-content {
+        margin-top: 30px;
+        padding: 30px;
+        background-color: #ffffff; /* Beyaz arka plan */
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+    }
+
+    h2 {
+        color: #d9534f; /* Kırmızı başlık rengi */
+        border-bottom: 2px solid #d9534f; /* Alt çizgi */
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+    }
+
+    p {
+        line-height: 1.6; /* Satır yüksekliği */
+        color: #555; /* Koyu gri metin rengi */
+    }
+
+    .team-section {
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .team-member {
+        display: inline-block;
+        margin: 15px;
+        padding: 20px;
+        background-color: #f8f9fa; /* Açık gri arka plan */
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+        width: 200px;
+    }
+
+    .team-member img {
+        border-radius: 50%; /* Yuvarlak resim */
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10px;
+    }
+
+    .team-member h4 {
+        margin: 10px 0 5px;
+        color: #333;
+    }
+
+    .team-member p {
+        font-size: 0.9em;
+        color: #777; /* Açık gri metin rengi */
+    }
+</style>
+
+<div class="container">
+    <div class="about-header">
+        <h1>Kafe Hakkında</h1>
+        <p>Lezzetli kahveler ve sıcak bir atmosfer sunuyoruz.</p>
+    </div>
+
+    <div class="about-content">
+        <h2>Tarihçemiz</h2>
+        <p>
+            Kafemiz, 2020 yılında İstanbul'un kalbinde, kahveseverler için bir buluşma noktası olarak kuruldu. 
+            Amacımız, kaliteli kahve ve ev yapımı lezzetler sunarak misafirlerimize unutulmaz bir deneyim yaşatmaktır.
+        </p>
+
+        <h2>Misyonumuz</h2>
+        <p>
+            Misyonumuz, her zaman en taze ve kaliteli malzemeleri kullanarak, misafirlerimize en iyi hizmeti sunmaktır. 
+            Sıcak bir ortamda, dostça bir atmosferde, herkesin kendini özel hissetmesini sağlamak için çalışıyoruz.
+        </p>
+
+        <h2>Vizyonumuz</h2>
+        <p>
+            Vizyonumuz, Türkiye genelinde tanınan ve tercih edilen bir kafe markası olmaktır. 
+            Müşteri memnuniyetini ön planda tutarak, sürekli olarak kendimizi geliştirmeyi hedefliyoruz.
+        </p>
+
+        
+                

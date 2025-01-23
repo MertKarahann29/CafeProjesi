@@ -1,0 +1,99 @@
+@{
+    ViewBag.Title = "İletişim";
+    Layout = "~/Views/Shared/_Layout.cshtml"; // Ana layout dosyanız
+}
+
+<style>
+    body {
+        background-color: #f4f4f4; /* Açık gri arka plan */
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .contact-header {
+        background-color: #ffcc00; /* Canlı sarı arka plan */
+        padding: 40px;
+        border-radius: 8px;
+        color: #333;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Hafif gölge */
+    }
+
+    .contact-header h1 {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+    }
+
+    .contact-form {
+        margin-top: 30px;
+        padding: 30px;
+        background-color: #ffffff; /* Beyaz arka plan */
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    label {
+        font-weight: bold;
+        color: #333;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box; /* Padding ve border dahil */
+    }
+
+    textarea {
+        resize: vertical; /* Yalnızca dikey boyutlandırma */
+    }
+
+    button {
+        background-color: #d9534f; /* Kırmızı buton rengi */
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1em;
+    }
+
+    button:hover {
+        background-color: #c9302c; /* Hover efekti */
+    }
+</style>
+
+<div class="container">
+    <div class="contact-header">
+        <h1>İletişim</h1>
+        <p>Bizimle iletişime geçmek için aşağıdaki formu doldurun.</p>
+    </div>
+
+    <div class="contact-form">
+        <form asp-controller="Musteri" asp-action="Index" method="post">
+            <div class="form-group">
+                <label for="Ad">Adınız:</label>
+                <input type="text" id="Ad" name="Ad" required>
+            </div>
+            <div class="form-group">
+                <label for="Soyad">Soyadınız:</label>
+                <input type="text" id="Soyad" name="Soyad" required>
+            </div>
+            <div class="form-group">
+                <label for="mail">E-posta Adresiniz:</label>
+                <input type="mail" id="mail" name="mail" required>
+            </div>
+            <div class="form-group">
+                <label for="mesaj">Öneri/Şikayet:</label>
+                <textarea id="Mesaj" name="Mesaj" rows="5" required></textarea>
+            </div>
+            <button type="submit">Gönder</button>
+        </form>
+    </div>
+</div>

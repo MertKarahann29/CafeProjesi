@@ -1,0 +1,51 @@
+﻿@model List<SandTat>
+
+
+<style>
+    .menu-header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin: 15px;
+    }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            height: 200px; /* Resim yüksekliği */
+            object-fit: cover; /* Resim boyutlandırma */
+        }
+
+    .price {
+        font-weight: bold;
+        color: #d9534f; /* Fiyat rengi */
+    }
+</style>
+
+<div class="container">
+    <div class="menu-header">
+        <h1>Sandviç ve Tatlılar</h1>
+        <p>Lezzetli Sandviç ve Tatlılar seçeneklerimizle tanışın!</p>
+    </div>
+
+    <div class="row">
+        @foreach (var item in Model) // Modelden her bir menü öğesini döngü ile al
+        {
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="@item.Url" class="card-img-top" alt="@item.Ad">
+                    <div class="card-body">
+                        <h5 class="card-title">@item.Ad</h5>
+                        <p class="card-text">@item.Acıklama</p>
+                        <p class="price">₺@item.Ucret</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>

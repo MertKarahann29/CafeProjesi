@@ -1,0 +1,32 @@
+﻿
+
+<style>
+    .form-group {
+        margin-bottom: 15px;
+    }
+</style>
+
+
+<div class="container">
+    <form asp-controller="SogukKahve" asp-action="Index" method="post">
+    <h1>Kahve Ekle</h1>
+    <div class="form-group">
+        <label for="Ad">Kahve Adı:</label>
+            <input type="text" id="Ad" name="Ad" class="form-control" placeholder="Kahve adı girin" required>
+    </div>
+    <div class="form-group">
+        <label for="Acıklama">Açıklama:</label>
+            <input type="text" id="Acıklama" name="Acıklama" class="form-control" placeholder="Kahve açıklaması girin" required>
+    </div>
+        <div class="form-group">
+            <label for="Url">Resim Url:</label>
+            <input type="text" id="Url" name="Url" class="form-control" placeholder="Fotoğraf Url giriniz." required>
+        </div>
+    <div class="form-group">
+        <label for="Ucret">Fiyat:</label>
+            <input type="text" id="Ucret" Name="Ucret" class="form-control" placeholder="Fiyat girin" required>
+    </div>
+    <button id="addCoffeeButton" class="btn btn-primary">Kahve Ekle</button>
+        <a href="@Url.Action( "Menü","SogukKahve")" class="btn btn-secondary">Menüyü Görüntüle</a>
+    </form>
+</div>
