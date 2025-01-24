@@ -5,6 +5,10 @@
 
 132030067 İsmail GÜNGÖR
 
+Projemize ait arayüz ve kodları tanıttığımız youtube videosu linkimiz..
+
+https://www.youtube.com/watch?v=4NGZjUf-0XQ
+
 Bu projemizde bir kafenin menü web sitesini oluşturduk. Amacımız işletme  sahibinin veya yetkilinin kolay bir şekilde menüye kendi ürünlerini ekleyebilmesidir. Sayfamızın arayüzünü altta olduğu gibi fotoğraflarla açıklayacağız.
 
 
