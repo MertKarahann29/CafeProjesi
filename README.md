@@ -59,6 +59,17 @@ Bu tablodaki verilerin hepsi veritabanına kayıt olan bilgileri çekerek oluşt
 
 Admin linkimizde ise görülmüş olduğu gibi yetkilin çıkış yapmasını sağlayan bir etkileşim vardır.
 
+Dipnot: KENDİ SİSTEMİNİZDE ÇALIŞTIRABİLMENİZ İÇİN SQL EXPRESS BAĞLANTISINI MODEL KLASÖRÜNÜN İÇERİSİNDEKİ MyAppContext dosyasındaki Connection stringine aşağıdaki gösterilen kısma yazmanız gerekmektedir.
+
+![Connection](https://github.com/user-attachments/assets/39e3f259-2c9e-41c7-9e6f-7592ad9cf780)
+Ardından PM konsoluna Update-Database yazıp göndermemiz gerekmektedir.
+
+![update](https://github.com/user-attachments/assets/2cd9a54d-d056-4993-819d-3a8ffec8cf21)
+
+
+
+
+
 
 
 
