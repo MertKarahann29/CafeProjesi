@@ -52,6 +52,7 @@ Bu tablodaki verilerin hepsi veritabanına kayıt olan bilgileri çekerek oluşt
 (Tabloda görünen bilgiler deneme amaçlı girilmiş olmaktadır ve gerçek hesaplarla ilişkisi yoktur.)
 
 ![Çıkıs](https://github.com/user-attachments/assets/20e79fb8-ad65-4e34-9eff-d34288f507ec)
+
 Admin linkimizde ise görülmüş olduğu gibi yetkilin çıkış yapmasını sağlayan bir etkileşim vardır.
 
 
