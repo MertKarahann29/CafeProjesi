@@ -44,11 +44,11 @@ Bundan sonraki fotoğraflarda yeni gelen sekmeleri anlatacağım.
 
 ![Kahve Ekleme ](https://github.com/user-attachments/assets/254f0a19-a580-410f-8088-a11334f548ad)
 Soğuk kahve ekleme ve sıcak kahve ekleme sekmelerine girdiğimizde bu sayfa ile karşılaşıyoruz.
-Menüye buradan eklemlerimizi yapabiliyoruz ve eklemelerimizi görebiliriz buradaki her bir girilen bilgi veritabanımıza işlenmektedir ve değişimlerini yapabilmekteyiz.
+Menüye buradan eklemelerimizi yapabiliyoruz ve eklemelerimizi görebiliriz buradaki her bir girilen bilgi veritabanımıza işlenmektedir ve değişimlerini yapabilmekteyiz.
 
 ![Sandviç](https://github.com/user-attachments/assets/8dab34f0-e233-4c9f-8178-796f285dcd18)
 Bu sayfada sandviç ve tatlılarımızı ekleyebiliyoruz.
-Menüye buradan eklemlerimizi yapabiliyoruz ve eklemelerimizi görebiliriz buradaki her bir girilen bilgi veritabanımıza işlenmektedir ve değişimlerini yapabilmekteyiz.
+Menüye buradan eklemelerimizi yapabiliyoruz ve eklemelerimizi görebiliriz buradaki her bir girilen bilgi veritabanımıza işlenmektedir ve değişimlerini yapabilmekteyiz.
 
 ![Yorumlar1](https://github.com/user-attachments/assets/4af8b5f6-476b-40aa-af09-2a1437de04da)
 Yorumlar sayfamızda iletişim sayfamızda müşterinin bizlere göndermiş olduğu öneri ve şikayetleri içermektedir.
